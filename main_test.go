@@ -19,7 +19,7 @@ func TestMotdHandler(t *testing.T) {
 		t.Fatalf("Expected status 200; got %v", rec.Code)
 	}
 
-	expected := "Welcome to the Go MOTD Server! Have a great day!"
+	expected := "Welcome to the Go MOTD Server! Have a nice day!"
 	if rec.Body.String() != expected {
 		t.Errorf("Expected body %q; got %q", expected, rec.Body.String())
 	}
