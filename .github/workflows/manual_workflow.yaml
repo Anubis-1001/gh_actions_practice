@@ -8,7 +8,7 @@ on:
         required: true
         default: 'Programmer'
       age:
-        description: "User\'s age"
+        description: "User's age"
         required: true
 
 
@@ -18,5 +18,5 @@ jobs:
 
     steps:
     - name: display greet message
-      run: echo "Hello, i am ${github.event.inputs.name}, i am ${github.event.inputs.age} years old."
+      run: echo "Hello, i am ${{github.event.inputs.name}}, i am ${{ github.event.inputs.age }} years old."
 
