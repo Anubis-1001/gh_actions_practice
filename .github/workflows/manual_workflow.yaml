@@ -1,0 +1,22 @@
+name: manual workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'User name'
+        required: true
+        default: 'Programmer'
+      age:
+        description: "User\'s age"
+        required: true
+
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: display greet message
+      run: echo "Hello, i am ${github.event.inputs.name}, i am ${github.event.inputs.age} years old."
+
