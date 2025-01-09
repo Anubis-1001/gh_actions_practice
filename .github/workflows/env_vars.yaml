@@ -1,4 +1,4 @@
-nane: CI
+name: CI
 on: [push]
 
 env:
