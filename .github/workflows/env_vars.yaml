@@ -1,0 +1,17 @@
+nane: CI
+on: [push]
+
+env:
+  NAME: anubis
+  PROJECT: "github actions test project"
+
+jobs:
+  show_message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: display simple message
+        run: echo "user $NAME is running project \'$PROJECT\'"
+
