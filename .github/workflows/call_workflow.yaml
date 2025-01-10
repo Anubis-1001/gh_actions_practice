@@ -1,0 +1,12 @@
+name: calling workflow
+
+on: [push]
+
+jobs:
+  call-say-hi:
+    runs-on: ubuntu-latest
+    steps:
+    - name: call say hi
+      uses: ./inputs_workflow.yaml
+      with: 
+        name: Marte

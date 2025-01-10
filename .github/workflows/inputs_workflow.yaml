@@ -1,0 +1,17 @@
+name: workflow with inputs
+
+on: 
+  workflow_call:
+    inputs:
+      name: 
+        required: true
+        type: string
+
+
+jobs:
+  say_hi:
+    runs-on: ubuntu-latest
+    steps:
+    - name: say hi!
+      run: echo "Hello my name is ${{ inputs.name }}"
+
