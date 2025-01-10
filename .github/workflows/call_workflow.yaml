@@ -6,6 +6,8 @@ jobs:
   call-say-hi:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
+
     - name: call say hi
       uses: ./inputs_workflow.yaml
       with: 
