@@ -10,6 +10,6 @@ jobs:
       uses: actions/checkout@v2
 
     - name: call say hi
-      uses: Anubis-1001/gh_actions_practice/inputs_workflow.yaml@99ffa9cb5d5bb6e3828d229396eb9907feebf30a
+      uses: Anubis-1001/gh_actions_practice/.github/workflows/inputs_workflow.yaml@99ffa9cb5d5bb6e3828d229396eb9907feebf30a
       with: 
        name: Marte
