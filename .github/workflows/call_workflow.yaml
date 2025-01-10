@@ -9,6 +9,6 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: call say hi
-      uses: ./inputs_workflow.yaml
+      uses: ./.github/workflows/inputs_workflow.yaml
       with: 
         name: Marte
