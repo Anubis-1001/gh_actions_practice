@@ -10,7 +10,6 @@ jobs:
       uses: actions/checkout@v2
 
     - name: call say hi
-      run: echo "say hi"
-      #uses: ./.github/workflows/inputs_workflow.yaml
-      #with: 
-      # name: Marte
+      uses: Anubis-1001/gh_actions_practice/.github/workflows/inputs_workflow.yaml@main
+      with: 
+       name: Marte
