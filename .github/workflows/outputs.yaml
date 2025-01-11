@@ -15,4 +15,5 @@ jobs:
   job2:
     runs-on: ubuntu-latest
     needs: job1
-    run: echo "hello, my full name is ${{jobs.job1.outputs.result}}"
+    steps:
+    - run: echo "hello, my full name is ${{jobs.job1.outputs.result}}"
