@@ -1,0 +1,18 @@
+name: jobs comunnications
+
+on: [push]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      result: ${{ steps.set-output.outputs.result_name }}
+    steps:
+      - name: save output
+        id: set-output
+        run: echo "result_name=S. Takeshi" >> "$GITHUB_OUTPUT"
+
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    run: echo "hello, my full name is ${{jobs.job1.outputs.result}}"
